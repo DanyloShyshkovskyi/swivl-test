@@ -25,6 +25,9 @@ jobs:
       - name: Set BASE_URL
         run: echo "VITE_APP_BASE_URL=/swivl-test" >> .env
 
+      - name: Set API_URL
+        run: echo "VITE_APP_API_URL=https://api.github.com" >> .env
+
       # - name: Set GitHub token
       #   run: echo "VITE_APP_GH_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> .env
 
