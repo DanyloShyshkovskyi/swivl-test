@@ -14,7 +14,7 @@ const Content = () => {
 
   if (isLoading) return <UserPageSkeleton />
 
-  if (!data || error) return <ErrorCommunicate />
+  if (!data || error) return <ErrorCommunicate error={error} />
 
   const {
     login,

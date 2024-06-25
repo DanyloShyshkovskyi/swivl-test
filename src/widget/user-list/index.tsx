@@ -1,13 +1,14 @@
 import { useInView } from 'react-intersection-observer'
 
 import { useGetUserList } from 'shared/api/user'
+import { withErrorBoundary } from 'shared/controller'
 import { ErrorCommunicate } from 'shared/ui/error-communicate'
 import { getPageItems } from 'shared/utils'
 
 import { UserListItem } from './item'
 import { ItemSkeleton, SkeletonArray } from './skeleton'
 
-export const UserList = ({
+const UserList = ({
   search,
   updateSearch,
 }: {
@@ -36,7 +37,7 @@ export const UserList = ({
   if (isLoading)
     return <div className='flex flex-col gap-5'>{<SkeletonArray />}</div>
 
-  if (!data || error) return <ErrorCommunicate />
+  if (!data || error) return <ErrorCommunicate error={error} />
 
   if (getPageItems(data).length === 0)
     return (
@@ -59,3 +60,5 @@ export const UserList = ({
     </div>
   )
 }
+
+export default withErrorBoundary(UserList)

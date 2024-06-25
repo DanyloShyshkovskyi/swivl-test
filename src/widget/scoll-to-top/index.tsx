@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { cn } from 'shared/utils'
 
-export const ScrollToTop = () => {
+const ScrollToTop = () => {
   const [show, setShow] = useState(false)
 
   useEffect(() => {
@@ -44,3 +44,5 @@ export const ScrollToTop = () => {
     </button>
   )
 }
+
+export default ScrollToTop

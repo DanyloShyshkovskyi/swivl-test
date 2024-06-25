@@ -28,8 +28,7 @@ export const Grid = ({
 }) => {
   if (count === 0) return <NoUsersFound title={title} />
   if (isLoading) return <div className={gridClass}>{<SkeletonArray />}</div>
-  if (count === 0 || !data) return <NoUsersFound title={title} />
-  if (error) return <ErrorCommunicate />
+  if (error || !data) return <ErrorCommunicate error={error} />
 
   return (
     <div className={gridClass}>

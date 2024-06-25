@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import { withErrorBoundary } from 'shared/controller'
 import { useDebounce } from 'shared/hooks'
 import { Input } from 'shared/ui/input'
 
@@ -8,7 +9,7 @@ interface SearchProps {
   onChange: (value: string) => void
 }
 
-export const Search = ({ searchValue, onChange }: SearchProps) => {
+const Search = ({ searchValue, onChange }: SearchProps) => {
   const [value, setValue] = useState(searchValue)
   const debouncedCallback = useDebounce((value) => onChange(value), 500)
 
@@ -30,3 +31,5 @@ export const Search = ({ searchValue, onChange }: SearchProps) => {
     />
   )
 }
+
+export default withErrorBoundary(Search)

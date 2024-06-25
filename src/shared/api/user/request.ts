@@ -1,6 +1,5 @@
 import { useInfiniteQuery, useQuery } from 'react-query'
 
-// Import AxiosResponse type
 import { apiInstance } from 'shared/api'
 
 import { IRelationField, IUserDetail, IUserListResponse } from './interface'

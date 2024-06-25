@@ -1,6 +1,8 @@
 import { Outlet } from 'react-router'
 
-import { ScrollToTop } from 'widget/scoll-to-top'
+import ScrollToTop from 'widget/scoll-to-top'
+
+import { Toaster } from 'shared/ui/sonner'
 
 const Layout = () => {
   return (
@@ -8,6 +10,7 @@ const Layout = () => {
       <div className='container'>
         <Outlet />
         <ScrollToTop />
+        <Toaster />
       </div>
     </main>
   )

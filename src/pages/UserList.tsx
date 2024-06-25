@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
-import { Search } from 'widget/search'
-import { UserList } from 'widget/user-list'
+import Search from 'widget/search'
+import UserList from 'widget/user-list'
 
 export const Component = () => {
   const [search, setSearch] = useState('')

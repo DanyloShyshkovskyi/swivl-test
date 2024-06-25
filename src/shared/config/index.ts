@@ -5,13 +5,8 @@ const getEnvVar = (key: string) => {
 export const ROOT =
   document.getElementById('react-root') || document.createElement('div')
 
-export const IS_PRODUCTION = import.meta.env.PROD
-
 export const API_URL = getEnvVar('VITE_APP_API_URL')
 
 export const BASE_URL = getEnvVar('VITE_APP_BASE_URL')
 
 export const GH_TOKEN = getEnvVar('VITE_APP_GH_TOKEN')
-
-export const USER_PLACEHOLDER_IMAGE =
-  'https://img.icons8.com/material-rounded/96/EBEBEB/user-male-circle.png'

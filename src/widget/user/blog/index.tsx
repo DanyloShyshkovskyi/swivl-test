@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 
-export const Blog = ({ blog }: { blog: string | null }) => {
+import { withErrorBoundary } from 'shared/controller'
+
+export const Blog = withErrorBoundary(({ blog }: { blog: string | null }) => {
   const [blogExist, setBlogExist] = useState(false)
   useEffect(() => {
     if (!blog) {
@@ -45,4 +47,4 @@ export const Blog = ({ blog }: { blog: string | null }) => {
       )}
     </div>
   )
-}
+})
