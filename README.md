@@ -74,7 +74,3 @@ Before running the project, ensure you have copied `env.example` to `.env`.
 - `eslint` and plugins: JavaScript and TypeScript linting.
 - `prettier`: Code formatter.
 - `vite`: Next generation front-end tooling.
-
----
-
-Feel free to customize this `README.md` to include additional sections or details specific to your project. Happy coding!
