@@ -39,6 +39,9 @@ module.exports = {
     'no-console': 'warn',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'jsx-a11y/anchor-is-valid': ['error', { components: ['Link'], specialLink: ['to'] }],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      { components: ['Link'], specialLink: ['to'] },
+    ],
   },
-};
+}
